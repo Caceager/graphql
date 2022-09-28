@@ -1,0 +1,16 @@
+type Producto  {
+    nombre: String,
+    precio: Int,
+    imagen: String,
+    id: Int
+}
+
+type Query {
+    cargarProductos: [Producto]
+}
+
+type Mutation {
+    guardarProducto(nombre: String, precio: Int, imagen: String): Producto,
+    borrarProducto(id: Int): Producto
+}
+
